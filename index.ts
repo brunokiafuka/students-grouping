@@ -6,13 +6,12 @@ interface ClassList {
   mark: number;
 }
 
-function groupStudents(data: Array<ClassList>): void {
+function groupStudents(data: Array<ClassList>, stdPerGroup: number): void {
   const avg = Student.calculateAvg(data);
-  const studentsPerGroup = 2;
-  const numOfGroups = Math.floor(data.length / studentsPerGroup);
+  const numOfGroups = Math.floor(data.length / stdPerGroup);
 
   console.log("Avg: ", avg);
   console.log("Num of groups: ", numOfGroups);
 }
 
-groupStudents(data);
+groupStudents(data, 2);
