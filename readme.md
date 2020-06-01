@@ -76,7 +76,7 @@ Groups generated:
 ## Roadmap
 
 - [ ] Ensure the program generates fairly balanced groups; 
-- [ ] Generate reuasble lib
+- [ ] Generate reusable lib
 - [ ] Publish it no npm 
 
 > *PRs are welcomed* 🚀
