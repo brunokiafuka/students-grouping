@@ -21,6 +21,6 @@ This project is currently under develompent.
 - [ ] Generate reuasble lib
 - [ ] Publish it no npm 
 
-> *PR are welcomed* 🚀
+> *PRs are welcomed* 🚀
 
 
