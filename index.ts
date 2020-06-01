@@ -1,17 +1,22 @@
 import Student from "./lib/students";
 import data from "./lib/mock.json";
+import { ClassList, Group } from "./lib/interfaces";
 
-interface ClassList {
-  name: string;
-  mark: number;
-}
-
-function groupStudents(data: Array<ClassList>, stdPerGroup: number): void {
+function groupStudents(data: Array<ClassList>, stdPerGroup: number) {
   const avg = Student.calculateAvg(data);
-  const numOfGroups = Math.floor(data.length / stdPerGroup);
+  const numOfGroups = Math.ceil(data.length / stdPerGroup);
+  let groups: Array<Group> = [];
 
   console.log("Avg: ", avg);
   console.log("Num of groups: ", numOfGroups);
+
+  for (let i = 0; i < numOfGroups; i++) {
+    const newGroup = Student.genGroup(data, stdPerGroup, avg);
+    groups.push(newGroup);
+  }
+  return groups;
 }
 
-groupStudents(data, 2);
+const groups = groupStudents(data, 2);
+
+console.log(groups);
